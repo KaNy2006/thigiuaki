@@ -6,14 +6,14 @@ class Trangchu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-        child: Text(
-            'Chào mừng đến với ứng dụng KTGK',
-            textAlign: textAlign.Center,
-            style: textAlign(
-                fontSize: 25,
-                color: Color(0xFFAD1457),
-            ),
+      child: Text(
+        'Chào mừng đến với ứng dụng KTGK',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 25,
+          color: Color(0xFFAD1457),
         ),
+      ),
     );
   }
 }
