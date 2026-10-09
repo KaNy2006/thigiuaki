@@ -10,8 +10,8 @@ void main() {
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-@override
-State<MyApp> createState() => _MyAppState();
+  @override
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -26,34 +26,43 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      appBar: AppBar(
-        title: const Text('Ứng dụng KTGK'),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFFCE4EC),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFFF8BBD0),
+        ),
       ),
-      body: pages[selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedIndex,
-        selectedItemColor: const Color(0xFFAD1457),
-        unselectedItemColor: Colors.Grey,
-        backgroundColor: const Color(0xFFF8BBD0),
-        onTap: (index) {
-          setState(() {
-            selectedIndex = index;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Trang chủ',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.info),
-            label: 'Thông tin',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.description),
-            label: 'Liên hệ',
-          ),
-        ],
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Ứng dụng KTGK'),
+        ),
+        body: pages[selectedIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: selectedIndex,
+          selectedItemColor: const Color(0xFFAD1457),
+          unselectedItemColor: Colors.grey,
+          backgroundColor: const Color(0xFFF8BBD0),
+          onTap: (index) {
+            setState(() {
+              selectedIndex = index;
+            });
+          },
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Trang chủ',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.info),
+              label: 'Thông tin',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.description),
+              label: 'Liên hệ',
+            ),
+          ],
+        ),
       ),
     );
   }
