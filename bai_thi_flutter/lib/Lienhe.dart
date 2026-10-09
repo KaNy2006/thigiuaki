@@ -6,14 +6,14 @@ class Lienhe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-        child: Text(
-            'Thông tin liên hệ, Email: 24100041@st.phenikaa-uni.edu.vn',
-            textAlign: textAlign.Center,
-            style: textAlign(
-                fontSize: 25,
-                color: Colors.black,
-            ),
+      child: Text(
+        'Thông tin liên hệ, Email: 24100041@st.phenikaa-uni.edu.vn',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 25,
+          color: Colors.black,
         ),
+      ),
     );
   }
 }
